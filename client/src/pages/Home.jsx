@@ -1,4 +1,3 @@
-import React from "react";
 import heroImg01 from "../assets/images/hero-img01.png";
 import heroImg02 from "../assets/images/hero-img02.png";
 import heroImg03 from "../assets/images/hero-img03.png";
@@ -12,6 +11,7 @@ import { Link } from "react-router-dom";
 import { BsArrowRight } from "react-icons/bs";
 import About from "../components/About/About";
 import ServiceList from "../components/Services/ServiceList";
+import DoctorList from "../components/Doctors/DoctorList";
 
 const Home = () => {
   return (
@@ -234,9 +234,11 @@ const Home = () => {
                 </div>
 
                 <div className="flex items-center gap-[6px] lg:gap-[10px] mt-2 lg:mt-[18px]">
-                  <img src={avatarIcon} alt=""/>
-                  <h4 className="text-[10px] leading-3 lg:text-[16px] lg:leading-[22px] font-[700]
-                   text-headingColor">
+                  <img src={avatarIcon} alt="" />
+                  <h4
+                    className="text-[10px] leading-3 lg:text-[16px] lg:leading-[22px] font-[700]
+                   text-headingColor"
+                  >
                     Wayne Collins
                   </h4>
                 </div>
@@ -246,6 +248,21 @@ const Home = () => {
         </div>
       </section>
       {/* feature section end */}
+
+      {/* our great doctors */}
+      <section>
+        <div className="container">
+          <div className="xl:w-[470px] mx-auto">
+            <h2 className="heading text-center">Our great doctors</h2>
+            <p className="text_para text-center">
+              World-class care for everyone. Our health system offers unmatched,
+              expert health care.
+            </p>
+          </div>
+          <DoctorList />
+        </div>
+      </section>
+      {/* our great doctors end */}
     </>
   );
 };
